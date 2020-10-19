@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
 body {
   margin: 0;
   overflow: hidden;
@@ -76,7 +78,7 @@ section {
     font-size: 24px;
   }
 }
-p{
+.hint p{
   display: none;
 }
 input{
@@ -85,14 +87,17 @@ input{
 section{
   display: none;
 }
-img.title{
-  width: 90%;
-  max-width: 500px;
-  height: auto;
+.title{
   position: absolute;
-  left: 3vw;
+  left: 6vw;
   top: calc(100vh - 40vw);
   z-index: 999;
+  font-family: 'Noto Sans TC', sans-serif;
+  p{
+    color: white;
+    margin: none;
+    margin-top: 10px;
+  }
   @media screen and (min-width: 768px) {
     top: calc(100vh - 230px);
     @media screen and (min-width: 1200px) {
@@ -100,4 +105,53 @@ img.title{
       top: calc(100vh - 330px);
     }
   }
+}
+
+.glitch{
+  color:white;
+  font-size:40px;
+  position:relative;
+  width:400px;
+  margin:0 auto;
+}
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-1px 0 red;
+  top:0;
+  color:white;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 blue; 
+  top:0;
+  color:white;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
 }
