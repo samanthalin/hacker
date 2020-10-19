@@ -93,10 +93,23 @@ section{
   top: calc(100vh - 40vw);
   z-index: 999;
   font-family: 'Noto Sans TC', sans-serif;
+  .glitch{
+    color:white;
+    font-size:40px;
+    position:relative;
+    width:400px;
+    margin:0 auto;
+    @media screen and (min-width: 768px){
+      font-size: 76px;
+    }
+  }
   p{
     color: white;
     margin: none;
     margin-top: 10px;
+    @media screen and (min-width: 768px){
+      font-size: 28px;
+    }
   }
   @media screen and (min-width: 768px) {
     top: calc(100vh - 230px);
@@ -107,13 +120,7 @@ section{
   }
 }
 
-.glitch{
-  color:white;
-  font-size:40px;
-  position:relative;
-  width:400px;
-  margin:0 auto;
-}
+  
 @keyframes noise-anim{
   $steps:20;
   @for $i from 0 through $steps{
