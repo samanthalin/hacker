@@ -5,7 +5,7 @@ let grid = [];
 let particleImage;
 let ctx;
 function preload() {
-  img = loadImage('face4.png');
+  img = loadImage('anonymous.jpg');
 }
 
 class Particle {
@@ -158,8 +158,8 @@ function goToStep5 () {
   }
   
   particles = [];
-  for (let i = 0; i < 3000; i++) {
-    particles.push(new Particle(null, (i/3000) * height));
+  for (let i = 0; i < 1000; i++) {
+    particles.push(new Particle(null, (i/1000) * height));
   }
 }
 

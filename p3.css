@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("reset.css");
+@keyframes text-shadow {
+  0% {
+    transform: translate(-50%, -50%) scale(1); }
+  100% {
+    transform: translate(-50%, -50%) scale(2); } }
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif; }
+
+html {
+  overflow-x: none;
+  width: 100%; }
+  html body {
+    background-color: black; }
+    html body section.banner {
+      width: 100%;
+      height: 100vh;
+      position: relative; }
+      html body section.banner .title {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999; }
+        html body section.banner .title svg .cls-1 {
+          fill: none;
+          stroke: #fff;
+          stroke-miterlimit: 10; }
+        html body section.banner .title:hover svg .cls-1 {
+          fill: white; }
+      html body section.banner .text-shadow svg {
+        position: absolute;
+        width: 42.5%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: text-shadow 2s ease infinite; }
+        html body section.banner .text-shadow svg:nth-child(2) {
+          animation-delay: 0.2s; }
+        html body section.banner .text-shadow svg:nth-child(3) {
+          animation-delay: 0.4s; }
+        html body section.banner .text-shadow svg:nth-child(4) {
+          animation-delay: 0.6s; }
+        html body section.banner .text-shadow svg:nth-child(5) {
+          animation-delay: 0.8s; }
+      html body section.banner .text-shadow .animated {
+        animation: text-shadow 2s ease 1; }
+
+/*# sourceMappingURL=p3.css.map */
