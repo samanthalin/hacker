@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800;900&display=swap');
+@import url('reset.css');
+
+body{
+	background: radial-gradient(ellipse at center, #141d4e 0%,#0e0a19 100%);
+	//background: black;
+	width: 100%;
+	overflow-x: hidden;
+	canvas{
+		width: 100%;
+	}
+	#c{
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		opacity: 0.5;
+	}
+
+}
