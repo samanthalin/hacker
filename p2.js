@@ -5,7 +5,7 @@ let grid = [];
 let particleImage;
 let ctx;
 function preload() {
-  img = loadImage('anonymous.jpg');
+  img = loadImage('hacker.png');
 }
 
 class Particle {
